@@ -1,0 +1,21 @@
+{
+  "name": "interval-google-cloud-build",
+  "version": "0.1.0",
+  "main": "build/index.js",
+  "scripts": {
+    "dev": "nodemon --watch index.ts --exec 'ts-node index.ts'",
+    "build": "tsc",
+    "start": "node build/index.js"
+  },
+  "dependencies": {
+    "@interval/sdk": "https://s3.us-west-1.wasabisys.com/interval-sdk/interval-sdk-v0.11.0.tgz",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  }
+}
