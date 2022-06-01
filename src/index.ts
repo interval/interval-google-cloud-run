@@ -1,9 +1,8 @@
-require("dotenv").config();
-
 import Interval from "@interval/sdk";
+import "dotenv/config";
+import express from "express";
 
 // Google Cloud Run requires a process listening on port 8080
-const express = require("express");
 const app = express();
 const port = parseInt(process.env.PORT) || 8080;
 app.listen(port, () => {

@@ -14,7 +14,7 @@ RUN yarn install
 # Copy local code to the container image.
 COPY . ./
 
-RUN yarn run build
+RUN yarn build
 
 # Run the web service on container startup.
-CMD [ "npm", "start" ]
+CMD [ "yarn", "start" ]
