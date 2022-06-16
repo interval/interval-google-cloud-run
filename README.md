@@ -1,6 +1,6 @@
 # interval-google-cloud-run
 
-Here's an example project with Interval running on Google Cloud Run.
+Here's an example project with Interval running on [Google Cloud Run](https://cloud.google.com/run).
 
 ---
 
@@ -9,7 +9,7 @@ Here's an example project with Interval running on Google Cloud Run.
 There are two requirements for running Interval on Google Cloud Run:
 
 - Your instance must use [always allocated CPUs](https://cloud.google.com/blog/products/serverless/cloud-run-gets-always-on-cpu-allocation) with a single allocated instance
-- Your entrypoint must listen for connections on port 8080:
+- Your entrypoint must listen for connections on port 8080 (this is how Google knows that your app is online):
 
 ```ts
 const express = require("express");
@@ -30,7 +30,7 @@ interval.listen();
 
 Use the following instructions to set up a new instance on Google Cloud Run to run Interval. This guide assumes you'll be setting up continuous deployment from a GitHub repo using a Dockerfile.
 
-For examples of how to set up your project, check out the sample [Dockerfile](https://github.com/interval/interval-google-cloud-run/blob/main/Dockerfile) and [index.ts](https://github.com/interval/interval-google-cloud-run/blob/main/index.ts).
+For examples of how to set up your project, check out the sample [Dockerfile](https://github.com/interval/interval-google-cloud-run/blob/main/Dockerfile) and [index.ts](https://github.com/interval/interval-google-cloud-run/blob/main/src/index.ts).
 
 1. In Google Cloud Platform, go to the **Cloud Run** dashboard
 2. Click **Create Service**
