@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "nodemon --watch src -e index.ts",
+    "dev": "nodemon --watch src -e src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js"
   },
