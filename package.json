@@ -9,8 +9,7 @@
   },
   "dependencies": {
     "@interval/sdk": "^0.18.0",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.3"
+    "dotenv": "^16.0.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
