@@ -1,5 +1,4 @@
-require("dotenv").config();
-
+import "dotenv/config";
 import Interval, { io } from "@interval/sdk";
 
 // Google Cloud Run requires a process listening on port 8080
