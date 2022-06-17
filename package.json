@@ -3,14 +3,13 @@
   "version": "0.1.0",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "nodemon --watch src -e index.ts",
+    "dev": "nodemon --watch src -e src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js"
   },
   "dependencies": {
     "@interval/sdk": "^0.18.0",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.3"
+    "dotenv": "^16.0.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",
