@@ -12,16 +12,25 @@ There are two requirements for running Interval on Google Cloud Run:
 - Your entrypoint must listen for connections on port 8080 (this is how Google knows that your app is online):
 
 ```ts
-const express = require("express");
-const app = express();
+// src/index.ts
+require("dotenv").config();
+
+import Interval, { io } from "@interval/sdk";
 
 // Google Cloud Run requires a process listening on port 8080
-const port = parseInt(process.env.PORT) || 8080;
-app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
-});
+const http = require("http");
+const server = http.createServer(() => {});
+server.listen(8080);
 
-// Interval config...
+const interval = new Interval({
+  apiKey: process.env.INTERVAL_API_KEY,
+  actions: {
+    hello_world: async () => {
+      const name = await io.input.text("Your name");
+      return `Hello, ${name}`;
+    },
+  },
+});
 
 interval.listen();
 ```
