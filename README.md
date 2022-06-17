@@ -13,8 +13,7 @@ There are two requirements for running Interval on Google Cloud Run:
 
 ```ts
 // src/index.ts
-require("dotenv").config();
-
+import "dotenv/config";
 import Interval, { io } from "@interval/sdk";
 
 // Google Cloud Run requires a process listening on port 8080
